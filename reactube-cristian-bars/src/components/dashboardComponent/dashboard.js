@@ -10,6 +10,7 @@ class Dashboard extends React.Component {
         selectedVideo: null
     }
     handleSubmit = async (termFromSearchBar) => {
+        debugger
         const response = await youtube.get('/search', {
             params: {
                 q: termFromSearchBar
