@@ -29,16 +29,10 @@ class Dashboard extends React.Component {
         return (
             <Container>
                 <Searchbar handleFormSubmit={this.handleSubmit}/>
-                <div className="ui grid">
                     <YoutubeVideos>
-                        <div className="eleven wide column">
                             <VideoDetail video={this.state.selectedVideo}/>
-                        </div>
-                        <div className="five wide column">
                             <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
-                        </div>
                     </YoutubeVideos>
-                </div>
             </Container>
         )
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {VideoIframe, VideoDetailDiv} from './videoDetailStyles';
+import {VideoIframe, VideoDetailDiv, VideoInfo} from './videoDetailStyles';
 
 const VideoDetail = ({video}) => {
     if (!video) {
@@ -10,13 +10,12 @@ const VideoDetail = ({video}) => {
     console.log(typeof(video));
     return (
         <VideoDetailDiv>
-            <div className='ui embed'>
                 <VideoIframe src={videoSrc} allowFullScreen title='Video player'/>
-            </div>
-            <div className='ui segment'>
-                <h4 className='ui header'>{video.snippet.title}</h4>
-                <p>{video.snippet.description}</p>
-            </div>
+                <VideoInfo>
+                    <h4 className='ui header'>{video.snippet.title}</h4>
+                    <p>{video.snippet.description}</p>
+                </VideoInfo>
+                
         </VideoDetailDiv>
 
     )

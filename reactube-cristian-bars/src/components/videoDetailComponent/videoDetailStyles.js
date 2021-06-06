@@ -8,3 +8,7 @@ export const VideoIframe = styled.iframe`
 export const VideoDetailDiv = styled.div`
   padding-top: 10px;
 `;
+
+export const VideoInfo = styled.div`
+    width: 90%;
+`
