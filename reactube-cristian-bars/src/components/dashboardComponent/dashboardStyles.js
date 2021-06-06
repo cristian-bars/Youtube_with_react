@@ -4,7 +4,7 @@ export const Container = styled.div`
   width: 100%;
   max-width: 1000px;
   padding: 50px;
-  border: 1px solid grey;
+  border: 1px solid lightgrey;
   margin: 0 auto;
 `;
 
