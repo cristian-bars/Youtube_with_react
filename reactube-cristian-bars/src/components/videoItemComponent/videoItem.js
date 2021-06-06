@@ -1,13 +1,14 @@
 import React from 'react';
+import {VideoItemdiv, VideoImg, VideoContent, VideoTitle} from './videoItemStyles'
 
 const VideoItem = ({video , handleVideoSelect}) => {
     return (
-        <div onClick={ () => handleVideoSelect(video)} className=' video-item item'>
-            <img className='ui image' src={video.snippet.thumbnails.medium.url} alt={video.snippet.description}/>
-            <div className='content'>
-                <div className='header '>{video.snippet.title}</div>
-            </div>
-        </div>
+        <VideoItemdiv onClick={ () => handleVideoSelect(video)}>
+            <VideoImg src={video.snippet.thumbnails.medium.url} alt={video.snippet.description}/>
+            <VideoContent>
+                <VideoTitle>{video.snippet.title}</VideoTitle>
+            </VideoContent>
+        </VideoItemdiv>
     )
 };
 export default VideoItem;

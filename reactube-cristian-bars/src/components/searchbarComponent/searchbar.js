@@ -1,4 +1,5 @@
 import React from 'react';
+import {Container, Input, Label} from './searchbarStyles';
 
 class Searchbar extends React.Component {
     state = {
@@ -16,14 +17,14 @@ class Searchbar extends React.Component {
     
     render() {
         return (
-            <div className="search-bar ui segment">
+            <Container>
                 <form onSubmit={this.handleSubmit} className="ui form">
-                    <div className="field">
-                        <label htmlFor="video-search">Video Search</label>
+                    <Input>
+                        <Label htmlFor="video-search">Video Search</Label>
                         <input onChange={this.handleChange} name="video-search" type="text" value={this.state.term}/>
-                    </div>
+                    </Input>
                 </form>
-            </div>
+            </Container>
         )
     }
 }

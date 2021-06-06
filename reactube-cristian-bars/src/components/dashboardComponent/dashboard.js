@@ -3,6 +3,7 @@ import youtube from '../../api/youtube';
 import Searchbar from '../searchbarComponent/searchbar';
 import VideoDetail from '../videoDetailComponent/videoDetail';
 import VideoList from '../videoListComponent/videoList';
+import { Container, YoutubeVideos } from './dashboardStyles';
 
 class Dashboard extends React.Component {
     state = {
@@ -26,19 +27,19 @@ class Dashboard extends React.Component {
     
     render() {
         return (
-            <div className="ui container">
+            <Container>
                 <Searchbar handleFormSubmit={this.handleSubmit}/>
                 <div className="ui grid">
-                    <div className="ui row">
+                    <YoutubeVideos>
                         <div className="eleven wide column">
                             <VideoDetail video={this.state.selectedVideo}/>
                         </div>
                         <div className="five wide column">
                             <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
                         </div>
-                    </div>
+                    </YoutubeVideos>
                 </div>
-            </div>
+            </Container>
         )
     }
 }
